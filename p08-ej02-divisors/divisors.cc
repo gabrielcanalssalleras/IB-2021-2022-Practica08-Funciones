@@ -7,7 +7,7 @@
  * @file divisors.cc
  * @author Gabriel Ángel Canals Salleras alu0101460468@ull.edu.es
  * @date 16 Nov 2021
- * @brief Prints in order all divisors of a number.
+ * @brief Prints in order all divisors of a natural number.
  * @bug There are no known bugs
  * @see https://jutge.org/problems/P39308
  */
@@ -53,8 +53,8 @@ int GetLargeDivisor(const int kGivenNumber, const int kSmallDivisor) {
  * @param[in] kGivenNumber: Number inserted by the user.
  */
 void PrintSmallDivisors(const int kGivenNumber) {
-  int iteration{1};
-  for (iteration; iteration <= sqrt(kGivenNumber); ++iteration) {
+  int iteration;
+  for (iteration = 1; iteration <= sqrt(kGivenNumber); ++iteration) {
     if (CheckIsDivisor(kGivenNumber, iteration)) {
       std::cout << " ";
       std::cout << iteration;
@@ -67,9 +67,9 @@ void PrintSmallDivisors(const int kGivenNumber) {
  * @param[in] kGivenNumber: Number inserted by the user.
  */
 void PrintLargeDivisors(const int kGivenNumber) {
-  int iteration{static_cast<int>(sqrt(kGivenNumber))};
+  int iteration;
   int next_large_divisor;
-  for (iteration; iteration >= 1; --iteration) {
+  for (iteration = static_cast<int>(sqrt(kGivenNumber)); iteration >= 1; --iteration) {
     if (CheckIsDivisor(kGivenNumber, iteration) && iteration != sqrt(kGivenNumber)) {
       std::cout << " ";
       next_large_divisor = GetLargeDivisor(kGivenNumber, iteration);

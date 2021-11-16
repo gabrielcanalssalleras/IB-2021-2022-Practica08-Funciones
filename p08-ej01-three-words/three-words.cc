@@ -6,7 +6,7 @@
  *
  * @file three-words.cc
  * @author Gabriel Ángel Canals Salleras alu0101460468@ull.edu.es
- * @date 15 Nov 2021
+ * @date 16 Nov 2021
  * @brief Prints three words in the reverse order they entered.
  * @bug There are no known bugs
  * @see https://jutge.org/problems/P62421
@@ -19,7 +19,7 @@
  * @brief Prints an initial message that tells the user what the program does.
  */
 void PrintInitialMessage() {
-  std::cout << "This program takes three words and prints them in reverse order\n\n";
+  std::cout << "This program takes three words and prints them in reverse order.\n\n";
   std::cout << "Insert three words: ";
 }
 

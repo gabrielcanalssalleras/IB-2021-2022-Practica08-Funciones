@@ -20,7 +20,7 @@
 void PrintInitialMessage() {
   std::cout << "This program takes a natural number and prints ";
   std::cout << "the n-th harmonic number, being n the given number\n\n";
-  std::cout << "Insert some text finished with a dot '.' to check it out:\n";
+  std::cout << "Insert a natural number: \n";
 }
 
 /**

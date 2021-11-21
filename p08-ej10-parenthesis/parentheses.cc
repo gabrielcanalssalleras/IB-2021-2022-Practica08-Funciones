@@ -103,7 +103,7 @@ int main() {
     char new_letter;
     std::cin >> new_letter;
     last_letter = new_letter;
-    correctly_closed = CheckCorrectlyClosed(closed_parentheses, open_parentheses, new_letter);
+    correctly_closed = CheckSequence(closed_parentheses, open_parentheses, new_letter);
     open_parentheses += CountOpenParenthesis(new_letter);
     closed_parentheses += CountClosedParenthesis(new_letter);
   }

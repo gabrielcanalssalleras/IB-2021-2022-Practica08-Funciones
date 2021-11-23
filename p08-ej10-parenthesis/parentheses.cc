@@ -22,12 +22,8 @@ void PrintInitialMessage() {
   std::cout << "checks if they close correctly.\n\n";
   std::cout << "Insert a sequence of parentheses: \n";
 }
+// * @return 1 if it is an open one. Otherwise, 0.
 
-/**
- * @brief Checks if the user had inserted an open parentheses.
- * @param[in] kNewParentheses: New parentheses.
- * @return 1 if it is an open one. Otherwise, 0.
- */
 int CountOpenParenthesis(const char kNewParentheses) {
   int letter{kNewParentheses};
   if (letter == '(') {
@@ -103,11 +99,15 @@ int main() {
     char new_letter;
     std::cin >> new_letter;
     last_letter = new_letter;
+  if (correctly_closed == true) {
     correctly_closed = CheckSequence(closed_parentheses, open_parentheses, new_letter);
+  }
     open_parentheses += CountOpenParenthesis(new_letter);
     closed_parentheses += CountClosedParenthesis(new_letter);
   }
-  correctly_closed = CheckLastLetter(closed_parentheses, open_parentheses, last_letter);
+  if (correctly_closed == true) {
+    correctly_closed = CheckLastLetter(closed_parentheses, open_parentheses, last_letter);
+  }
   PrintResolution(correctly_closed);
   return 0;
 }
